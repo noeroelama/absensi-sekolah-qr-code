@@ -238,6 +238,9 @@ class Scan extends BaseController
          case 'Fonnte':
             $whatsapp = new \App\Libraries\Whatsapp\Fonnte\Fonnte($token);
             break;
+         case 'Wanesia':
+            $whatsapp = new \App\Libraries\Whatsapp\Wanesia\Wanesia($token);
+            break;
          default:
             return;
       }
