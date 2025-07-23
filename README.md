@@ -154,6 +154,8 @@ Aplikasi Web Sistem Absensi Sekolah Berbasis QR Code adalah sebuah proyek yang b
 >
 >   _**Untuk mendapatkan token, daftar di website [fonnte](https://md.fonnte.com/new/register.php) terlebih dahulu. Lalu daftarkan device anda dan [dapatkan token Fonnte Whatsapp API](https://docs.fonnte.com/token-api-key/)**_
 >
+>  _**Jika menggunakan Wanesia, untuk mendapatkan token, daftar di website [Wanesia](https://wanesia.com) terlebih dahulu. Lalu daftarkan device Anda**_
+>
 > - Untuk mengubah konfigurasi nama sekolah, tahun ajaran logo sekolah dll sudah disediakan pengaturan (khusus untuk superadmin).
 >
 > - Logo Sekolah Rekomendasi 100x100px atau 1:1 dan berformat PNG/JPG.
