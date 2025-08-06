@@ -20,6 +20,17 @@ class Wanesia implements Whatsapp
         return $this->token ?? env('WHATSAPP_TOKEN');
     }
 
+    public function generateRandomString($length = 6) {
+        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
+
     /**
      * Send message to Wanesia API
      * @param array|string $messages
@@ -38,7 +49,8 @@ class Wanesia implements Whatsapp
         }
 
         // Buat objek WanesiaMessage dari data array
-        $wanesiaMessage = new WanesiaMessage($messageData['destination'], $messageData['message'], $messageData['delay'] ?? 0);
+        $footer = "\n\n\n================\nMsgID: " . $this->generateRandomString;
+        $wanesiaMessage = new WanesiaMessage($messageData['destination'], $messageData['message'] . $footer, $messageData['delay'] ?? 0);
 
         $curl = curl_init();
 
