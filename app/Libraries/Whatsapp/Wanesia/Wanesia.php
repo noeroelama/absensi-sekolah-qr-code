@@ -49,7 +49,7 @@ class Wanesia implements Whatsapp
         }
 
         // Buat objek WanesiaMessage dari data array
-        $footer = "\n\n\n================\nMsgID: " . $this->generateRandomString;
+        $footer = "\n\n\n================\nMsgID: " . $this->generateRandomString(8);
         $wanesiaMessage = new WanesiaMessage($messageData['destination'], $messageData['message'] . $footer, $messageData['delay'] ?? 0);
 
         $curl = curl_init();
